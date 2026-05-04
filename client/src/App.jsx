@@ -11,7 +11,7 @@ export default function App() {
   }, []);
 
   const addNote = () => {
-    fetch("http://localhost:5000/notes", {
+    fetch("http://backend:5000/notes", {
       method: "POST",
       headers: {"Content-Type": "application/json"},
       body: JSON.stringify({ text })
