@@ -35,7 +35,7 @@ export default function App() {
       <div style={styles.card}>
         <div style={styles.badge}>Docker + React + Node + CI/CD</div>
 
-        <h1 style={styles.title}>DevOps Notes</h1>
+        <h1 style={styles.title}>DevOps Notes 🚀</h1>
 
         <p style={styles.subtitle}>
           A containerized full-stack app built with Docker Compose and GitHub Actions.
