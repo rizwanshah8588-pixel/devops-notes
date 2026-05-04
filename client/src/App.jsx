@@ -55,6 +55,20 @@ export default function App() {
           </button>
         </div>
 
+    <div style={styles.pipeline}>
+       <h2 style={styles.pipelineTitle}>DevOps Pipeline</h2>
+
+        <div style={styles.pipelineFlow}>
+          {["Code", "GitHub", "CI Build", "Docker", "Compose", "Deploy"].map(
+            (step, index) => (
+        <div key={step} style={styles.pipelineItem}>
+        <div style={styles.pipelineCircle}>{index + 1}</div>
+           <span>{step}</span>
+        </div>
+      )
+    )}
+  </div>
+</div>
         <div style={styles.stats}>
           <div style={styles.statBox}>
             <strong>{notes.length}</strong>
@@ -90,7 +104,43 @@ export default function App() {
 }
 
 const styles = {
-  page: {
+    pipeline: {
+  marginTop: "35px",
+  padding: "22px",
+  background: "#020617",
+  border: "1px solid #1e293b",
+  borderRadius: "18px",
+},
+pipelineTitle: {
+  marginTop: 0,
+  color: "#67e8f9",
+},
+pipelineFlow: {
+  display: "flex",
+  justifyContent: "center",
+  gap: "14px",
+  flexWrap: "wrap",
+},
+pipelineItem: {
+  minWidth: "100px",
+  padding: "14px",
+  borderRadius: "14px",
+  border: "1px solid rgba(34, 211, 238, 0.35)",
+  textAlign: "center",
+},
+pipelineCircle: {
+  width: "34px",
+  height: "34px",
+  borderRadius: "50%",
+  background: "#06b6d4",
+  color: "#001018",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  fontWeight: "bold",
+  margin: "0 auto 10px",
+},
+    page: {
     minHeight: "100vh",
     background:
       "linear-gradient(135deg, #020617 0%, #0f172a 45%, #111827 100%)",
